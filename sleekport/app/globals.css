@@ -3,20 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
+main {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -26,10 +19,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-nav {
-  background-color: #333;
-  padding: 1rem;
-}
+
 
 ul {
   list-style: none;
@@ -43,12 +33,23 @@ li {
 }
 
 a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
-
-
-
+    @media only screen and (min-width: 768px){
+        .parent:hover .child {
+            opacity:1;
+            height:auto;
+            overflow:none;
+            transform: translateY(0);
+        }
+        .child {
+            opacity:0;
+            height:0;
+            overflow:hidden;
+            transform: translateY(-10%);
+        }
+    }
 
 
